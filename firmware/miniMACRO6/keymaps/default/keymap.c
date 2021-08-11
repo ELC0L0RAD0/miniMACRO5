@@ -5,15 +5,33 @@
 void encoder_update_user(uint8_t index, bool clockwise) {
   if (index == 0) { /* First encoder*/
     if (clockwise) {
-      tap_code(KC_1);
+      tap_code(KC_VOLU);
     } else {
-      tap_code(KC_2);
+      tap_code(KC_VOLD);
     }
   } else if (index == 1) { /* Second encoder*/  
     if (clockwise) {
-      tap_code(KC_3);
+      tap_code(KC_VOLU);
     } else {
-      tap_code(KC_4);
+      tap_code(KC_VOLD);
+    }
+  } else if (index == 3) { /* Third encoder*/  
+    if (clockwise) {
+      tap_code(KC_VOLU);
+    } else {
+      tap_code(KC_VOLD);
+    }
+  } else if (index == 4) { /* Fourth encoder*/  
+    if (clockwise) {
+      tap_code(KC_VOLU);
+    } else {
+      tap_code(KC_VOLD);
+    }
+  } else if (index == 5) { /* Fifth encoder*/  
+    if (clockwise) {
+      tap_code(KC_VOLU);
+    } else {
+      tap_code(KC_VOLD);
     }
   } 
 }
@@ -41,6 +59,6 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 //
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = { //buttion closest to usb is first
   [_MAIN] = LAYOUT(
-     KC_A, TD(TD_RGB), KC_C, KC_D, KC_E, KC_F 
+     KC_MPRV, TD(TD_RGB), KC_MNXT, KC_MSTP, KC_MPLY, KC_F 
   )
 };
