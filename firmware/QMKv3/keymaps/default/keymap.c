@@ -5,9 +5,9 @@
 void encoder_update_user(uint8_t index, bool clockwise) {
   if (index == 0) { /* First encoder*/
     if (clockwise) {
-      tap_code(KC_1);
+      tap_code(LGUI(KC_TAB));
     } else {
-      tap_code(KC_2);
+      tap_code(LGUI(KC_LEFT_SHIFT(KC_TAB)));
     }
   } else if (index == 1) { /* Second encoder*/  
     if (clockwise) {
